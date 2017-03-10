@@ -37,7 +37,16 @@ python3 main.py
 
 # 結果
 
-XMLファイルの記事データが、[はてなブログ記事DBを作る](http://ytyaru.hatenablog.com/entry/2017/07/02/000000)で作成したDBに保存される。
+フォトライフのRSSを`photo_life.xml`ファイルに書き出す。
+
+対象は'Hatena Blog'フォルダ。はてなブログ編集画面でアップロードした画像が配置されるフォルダである。
+
+```python
+url = 'http://f.hatena.ne.jp/{0}/{1}/rss'.format(hatena_id, 'Hatena Blog')
+```
+```python
+with open('photo_life.xml', 'wb') as f:
+```
 
 # ライセンス
 

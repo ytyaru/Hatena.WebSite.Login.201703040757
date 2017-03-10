@@ -30,7 +30,7 @@ class HatenaSite(object):
 
         url = 'http://f.hatena.ne.jp/{0}/{1}/rss'.format(hatena_id, 'Hatena Blog')
         res = opener.open(url)
-        with open('out.html', 'wb') as f:
+        with open('photo_life.xml', 'wb') as f:
             f.write(res.read())
         res.close()
         
